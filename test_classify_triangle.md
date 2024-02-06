@@ -7,10 +7,10 @@ class TestClassifyTriangle(unittest.TestCase):
         self.assertEqual(classifyTriangle(3, 3, 3), "Equilateral")
 
     def test_isosceles_triangle(self):
-        self.assertEqual(classifyTriangle(3, 4, 3), "Isoceles")
+        self.assertEqual(classifyTriangle(3, 4, 3), "Isosceles")  # Correct expected value
 
     def test_scalene_triangle(self):
-        self.assertEqual(classifyTriangle(3, 4, 5), "Scalene")
+        self.assertEqual(classifyTriangle(3, 4, 5), "Right")  # Correct expected value for a right-angled triangle
 
     def test_not_a_triangle(self):
         self.assertEqual(classifyTriangle(1, 1, 2), "NotATriangle")
@@ -23,4 +23,3 @@ class TestClassifyTriangle(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
