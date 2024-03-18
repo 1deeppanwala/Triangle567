@@ -1,7 +1,14 @@
-language: python
-python:
- - "3.5"
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.5
 
-# command to run tests
-script:
- - python -m unittest TestTriangle
+    steps:
+      - checkout
+
+      # Install dependencies
+      - run: pip install -r requirements.txt
+
+      # Run tests
+      - run: python -m unittest discover
