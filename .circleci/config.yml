@@ -24,4 +24,4 @@ jobs:
       - run:
           name: Run tests
           command: |
-            python -m unittest TestTriangle.py
+            python -m unittest Triangle.py
